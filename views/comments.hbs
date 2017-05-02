@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soccer Highligths</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="container-fluid">
+      {{#each post}}
+      <div class="well">
+        <span class="title">{{title}}</span>
+        <span class="title">{{url}}</span>
+      </div>
+      <br><br>
+    </header>
+    <section class="container-fluid">
+      <div class="">
+        <form class="" action="/newComment" method="post">
+          <input type="text" name="comments" value="" placeholder="Enter text here">
+          <input type="hidden" name="post_id" value="{{id}}">
+          <button type="submit">Submit</button>
+         </form>
+      </div>
+      {{/each}}
+    </section>
+    <main class="container-fluid">
+      {{#each comments}}
+      <div class="well">
+        <span> {{this.comments}}</span>
+      </div>
+      {{/each}}
+    </main>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
