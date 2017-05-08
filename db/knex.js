@@ -1,7 +1,6 @@
-const config = require('../knexfile')
+const environment  = process.env.NODE_ENV || 'development'
 
-const  deploy_environment  = process.env.DATABASE_URL || 'development'
-const connection = config[deploy_environment]
+const config = require('../knexfile')[environment]
 
 const pg = require('knex')(connection)
 
