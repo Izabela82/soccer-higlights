@@ -1,3 +1,5 @@
+const environment = process.env.NODE_ENV ||
+
 const config = require('../knexfile')
 
 const  deploy_environment  = process.env.DATABASE_URL || 'development'

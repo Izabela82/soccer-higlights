@@ -3,46 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>Soccer Highligths</title>
+    <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <section class="container-fluid submit-post">
-      <form action="/add-post" method="post">
-        <div>
-          <label for="url">URL</label>
-          <input type="text" name="url" value="">
-        </div>
-        <div>
-          <label for="title">Title</label>
-          <input type="text" name="title" value="">
-        </div>
-        <button>Submit</button>
-        <br><br>
-
-
-      </form>
-
-    </section>
-    <main class="container-fluid">
-      {{#each data}}
-      <div class="well">
-        <form class="" action="/upvote/{{id}}" method="get">
-          <button type="submit" name="Up">Up</button>
-        </form>
-        <span class="votes">{{votes}}</span>
-        <form class="" action="/downvote/{{id}}" method="get">
-          <button type="submit" name="Down">Down</button>
-        </form>
-        <span class="title"><a href="{{url}}">{{title}}</a></span>
+    <nav class="navbar">
+      <div class="brand"><h1>Foot Challange</h1><br>
+        <p class="navbar-text">Created by  Izabela Louw</p>
       </div>
-      <form class="" action="/getComments/{{id}}" method="get">
-          <button type="submit" name="getComments">Comments</button>
-      </form>
+      <section  class="container-fluid">
+        <form action="/add-post" method="post">
+          <div><br>
+            <label for="url">Enter new URL</label>
+            <input type="text" name="url" value="">
+          </div><br>
+          <div>
+            <label for="title">Enter the Title</label>
+            <input type="text" name="title" value="">
+          </div><br>
+          <button class="btn" >Submit</button>
+          <br><br>
+        </form>
+      </section>
 
-      <br><br>
+    </nav>
+    <main class="container-fluid main-body">
+      {{#each data}}
+      <div class="content">
+        <form class="" action="/upvote/{{id}}" method="get">
+          <button  class="btn default" type="submit" name="Up"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+        </form><br>
+        <span class="votes">{{votes}}</span><br>
+        <form class="" action="/downvote/{{id}}" method="get">
+          <button class="btn default" type="submit" name="Down"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button><br>
+        </form>
+        <span class="title"><a href="{{url}}">{{title}}</a></span><br>
+        <form class="id" action="/getComments/{{id}}" method="get">
+          <button class="btn btn-default" type="submit" name="getComments">Add your Comments</button>
+        </form>
+        <br><br>
+      </div>
       {{/each}}
-
-
     </main>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>

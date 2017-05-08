@@ -1,0 +1,95 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+  color: white;
+  background-color: black;
+  height: 170px;
+
+}
+.brand{
+  align-items:baseline;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  font-family:monospace;
+  padding-top: 2%;
+}
+.navbar-text{
+  text-align: left;
+}
+
+.main-body{
+  display: flex;
+  flex-direction:column;
+  width: 85%;
+  height: auto;
+  text-align: left;
+  justify-content: flex-end;
+}
+.content{
+  display: flex;
+  flex-direction:column;
+  width: 35%;
+  margin-left: 65%;
+  height: auto;
+  text-align:left;
+  justify-content:
+  space-between;
+  background-color: black;
+  border: 2px solid #445D62;
+  padding: 2%;
+  margin-top: 2%;
+
+}
+.title{
+  display:block;
+  display: flex;
+  text-align:right;
+  justify-content: flex-start;
+  padding: 20px;
+  justify-content:flex-start;
+  font-size: 3em;
+  text-transform: uppercase;
+
+}
+body{
+    background-image: url("http://wallsdesk.com/wp-content/uploads/2016/06/Lionel-Messi-Background-.jpg");
+    *opacity: 0.1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.comments-head{
+  margin-top: 2%;
+  margin-left: 23%;
+  display: flex;
+  text-align: center;
+  justify-content:flex-end;
+  width: 100%;
+
+}
+.content2{
+  isplay: flex;
+  flex-direction:column;
+  width: 35%;
+  margin-left: 55%;
+  height: auto;
+  text-align:left;
+  justify-content:
+  space-between;
+  border: 2px solid #445D62;
+  padding: 2%;
+  margin-top: 2%;
+}
+.comments{
+  font-size: 2em;
+}
+.input{
+  font-size: 2em;
+}
+.votes{
+  color: white
+}

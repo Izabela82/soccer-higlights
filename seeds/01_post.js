@@ -6,20 +6,31 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('post').insert([
         {
-          title:'Google',
+          title:'Goal',
           votes: 35,
-          url: "https://www.google.com"
+          url: "https://http://www.goal.com/en-us"
         },
         {
-          title:'Globo',
+          title:'World Soccer',
           votes: 22,
-          url: "https://www.globo.com"
+          url: "http://www.worldsoccer.com/"
         },
         {
-          title:'yahoo',
-          votes: 13,
-          url: "https://www.yahoo.com"
-        }
+          title:'Fifa',
+          votes: 43,
+          url: "http://www.fifa.com/"
+        },
+        {
+          title:'101 Great Goals',
+          votes: 10,
+          url: "http://www.101greatgoals.com/"
+        },
+        {
+        title:'Sports Lens',
+        votes: 13,
+        url: "http://sportslens.com/"
+      }
+
       ]);
     });
 };
